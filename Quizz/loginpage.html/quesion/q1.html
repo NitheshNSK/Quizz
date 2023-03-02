@@ -7,17 +7,18 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <title>Quizz</title>
 </head>
-<body onload="NextQuestion(0)">
+<body onload= "NextQuestion(0)">
    <div id="frame">
-      <header class="d-flex justify-content-between mt-5 p-3 border border-secondary " id="header">
-         <h1 class="headings">Quizz</h1>
+      <header class="d-flex justify-content-between mt-2 p-3 border border-secondary " id="header">
+        <h1> Question : <span id="question-number"></span></h1>
          <div id="timer-space">
-            <h4 class="headings" id="time">30</h4>
+            <h4 class="headings" id="timer">30</h4>
          </div>
          <a class="headings" href="#">Loginpage</a>
       </header>
-      <section class="d-flex justify-content-between mt-5 p-3 border border-secondary " id="Question-sec">
-         <h4>some question</h4>
+
+      <section class="d-flex justify-content-between mt-1 p-3 border border-secondary " id="Question-sec">
+         <h4 id="display-question"></h4>
          
       </section>
       <section id="main">
@@ -25,25 +26,25 @@
 
             <span>
                  <input type="radio" id="option-one" name="option" class="radio" value="optionA" />
-                 <label for="option-one" class="option" id="option-one-label">1</label>
+                 <label for="option-one" class="option" id="option-one-label"></label>
              </span>
 
 
              <span>
                  <input type="radio" id="option-two" name="option" class="radio" value="optionB" />
-                 <label for="option-two" class="option" id="option-two-label">2</label>
+                 <label for="option-two" class="option" id="option-two-label"></label>
              </span>
 
 
              <span>
                  <input type="radio" id="option-three" name="option" class="radio" value="optionC" />
-                 <label for="option-three" class="option" id="option-three-label">3</label>
+                 <label for="option-three" class="option" id="option-three-label"></label>
              </span>
 
 
              <span>
                  <input type="radio" id="option-four" name="option" class="radio" value="optionD" />
-                 <label for="option-four" class="option" id="option-four-label">4</label>
+                 <label for="option-four" class="option" id="option-four-label"></label>
              </span>
 
 
@@ -51,10 +52,11 @@
       </section>
      </div>
      <footer id="fotter" class="d-flex justify-content-around">
-      <button type="button" class="btn btn-outline-danger p-4">SUBMIT</button>
-      <button type="button" class="btn btn-outline-success p-4">NEXT</button>
+      <button type="button" class="btn btn-danger p-4" onclick="timeSubmision()">SUBMIT</button>
+      <button type="button" class="btn btn btn-success p-4" onclick="handleNextQuestion()">NEXT</button>
    </footer>
-    <script src="/Quizz/loginpage.html/quesion/script.js"></script>
+ 
+    <script src="/Quizz/script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 </body>
 </html>
